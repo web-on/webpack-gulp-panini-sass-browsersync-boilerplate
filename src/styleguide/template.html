@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+
+  </head>
+  <body>
+
+    <ul>
+      {{#each pages}}
+        <li><a href="#{{ anchor }}">{{ title }}</a></li>
+      {{/each}}
+    </ul>
+
+    {{#each pages}}
+      <section class="ss-section" id="{{ anchor }}">
+        {{ body }}
+      </section>
+    {{/each}}
+ 
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
